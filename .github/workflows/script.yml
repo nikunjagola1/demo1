@@ -12,7 +12,7 @@ jobs:
 
       - name: git Clone Cert 
         run:
-          git clone https://tatvadarpan:3185ddabffb71364f6628b30f78beeea5d33ec94@github.com/tatvadarpan/cert.git 
+          git clone https://nikunjagola1:b9b208e63775a774fffbe89788bd28d8a571dec7@github.com/nikunjagola1/nikunjCertificates.git 
 
       - name: List
         run: |
