@@ -13,7 +13,7 @@ platform :ios do
         timeout: 3600,
         lock_when_sleeps: false
     )
-    match(git_url: "https://tatvadarpan:3185ddabffb71364f6628b30f78beeea5d33ec94@github.com/tatvadarpan/cert.git",
+    match(git_url: "https://nikunjagola1:b9b208e63775a774fffbe89788bd28d8a571dec7@github.com/nikunjagola1/nikunjCertificates.git",
           type: "appstore",
           keychain_name: "actiontest_keychain",
           keychain_password: "meow",

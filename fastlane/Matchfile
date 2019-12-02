@@ -6,7 +6,7 @@ type("appstore") # The default type, can be: appstore, adhoc, enterprise or deve
 
 app_identifier("com.tatvasoft.vidoetest")
 
-ENV["MATCH_PASSWORD"] = "tatva123" #Password for the .p12 files saved in git repo.
+ENV["MATCH_PASSWORD"] = "test1234" #Password for the .p12 files saved in git repo.
 ENV["FASTLANE_USER"] = "nikunj.agola@tatvasoft.com" #Password for the .p12 files saved in git repo.
 ENV["FASTLANE_PASSWORD"] = "Tatvasoft321" #Password to access git repo.
 ENV["FASTLANE_TEAM_ID"] = "TLR3WLLVQX"
