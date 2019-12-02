@@ -1,5 +1,5 @@
 default_platform(:ios)
-ENV["FASTLANE_TEAM_ID"] = "358421"
+ENV["TEAM_ID_ITC"] = "358421"
 
 platform :ios do
 
@@ -21,7 +21,6 @@ platform :ios do
           username: "nikunj.agola@tatvasoft.com",
           app_identifier: "com.tatvasoft.vidoetest")
     gym(scheme: "demoCI", export_method: "app-store", clean: true , disable_xcpretty: true)
-    upload_to_testflight(username: "nikunj.agola@tatvasoft.com", team_id: ENV["TEAM_ID_ITC"],
-)
+    upload_to_testflight(username: "nikunj.agola@tatvasoft.com", team_id: ENV["TEAM_ID_ITC"])
   end
 end
