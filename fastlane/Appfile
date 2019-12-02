@@ -1,0 +1,10 @@
+app_identifier("com.tatvasoft.vidoetest") # The bundle identifier of your app
+apple_id("nikunj.agola@tatvasoft.com") # Your Apple email address
+itunes_connect_id "nikunj.agola@tatvasoft.com"     # App Store Connect Account
+
+itc_team_id("358421") # App Store Connect Team ID
+team_id("TLR3WLLVQX") # Developer Portal Team ID
+match(git_basic_authorization: '3185ddabffb71364f6628b30f78beeea5d33ec94')
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile

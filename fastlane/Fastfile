@@ -1,0 +1,25 @@
+default_platform(:ios)
+
+platform :ios do
+
+  desc "Upload Production to TestFlight"
+  lane :beta do
+
+  	create_keychain(
+        name: "actiontest_keychain",
+        password: "meow",
+        default_keychain: true,
+        unlock: true,
+        timeout: 3600,
+        lock_when_sleeps: false
+    )
+    match(git_url: "https://tatvadarpan:3185ddabffb71364f6628b30f78beeea5d33ec94@github.com/tatvadarpan/cert.git",
+          type: "appstore",
+          keychain_name: "actiontest_keychain",
+          keychain_password: "meow",
+          username: "nikunj.agola@tatvasoft.com",
+          app_identifier: "com.tatvasoft.vidoetest")
+    gym(scheme: "demoCI", export_method: "app-store", clean: true , disable_xcpretty: true)
+    upload_to_testflight
+  end
+end
