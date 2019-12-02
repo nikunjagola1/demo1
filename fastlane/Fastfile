@@ -20,6 +20,6 @@ platform :ios do
           username: "nikunj.agola@tatvasoft.com",
           app_identifier: "com.tatvasoft.vidoetest")
     gym(scheme: "demoCI", export_method: "app-store", clean: true , disable_xcpretty: true)
-    upload_to_testflight(username: "bot@fastlane.tools")
+    upload_to_testflight(username: "nikunj.agola@tatvasoft.com")
   end
 end
