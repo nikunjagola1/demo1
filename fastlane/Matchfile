@@ -1,10 +1,12 @@
-git_url("https://tatvadarpan:3185ddabffb71364f6628b30f78beeea5d33ec94@github.com/tatvadarpan/cert.git")
+git_url("https://nikunjagola1:b9b208e63775a774fffbe89788bd28d8a571dec7@github.com/nikunjagola1/nikunjCertificates.git")
 
 storage_mode("git")
 
 type("appstore") # The default type, can be: appstore, adhoc, enterprise or development
 
 app_identifier("com.tatvasoft.vidoetest")
+
+username 'nikunj.agola@tatvasoft.com'
 
 ENV["MATCH_PASSWORD"] = "test1234" #Password for the .p12 files saved in git repo.
 ENV["FASTLANE_USER"] = "nikunj.agola@tatvasoft.com" #Password for the .p12 files saved in git repo.

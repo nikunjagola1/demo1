@@ -1,5 +1,5 @@
 on: [push, pull_request]
-name: CI-1
+name: CI-2
 jobs:
   ios-testflight:
     name: iOS Testflight
