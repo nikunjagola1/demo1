@@ -1,0 +1,24 @@
+on: [push, pull_request]
+name: CI-1
+jobs:
+  ios-testflight:
+    name: iOS Testflight
+    runs-on: macOS-latest
+    steps:
+      - name: Force xcode 11
+        run: sudo xcode-select -switch /Applications/Xcode_11.1.app  
+
+      - uses: actions/checkout@v1
+
+      - name: git Clone Cert 
+        run:
+          git clone https://tatvadarpan:3185ddabffb71364f6628b30f78beeea5d33ec94@github.com/tatvadarpan/cert.git 
+
+      - name: List
+        run: |
+          ls
+
+      - name: fastlane build and testflight deploy
+        uses: maierj/fastlane-action@v0.10.0
+        with:
+          lane: 'beta'
