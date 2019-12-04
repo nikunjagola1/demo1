@@ -1,8 +1,8 @@
 name: Second App
 
 on:
-  milestone:
-    types: [closed]
+  issue_comment:
+    types: [created, deleted]
 
 jobs:
   build:

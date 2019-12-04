@@ -1,7 +1,7 @@
 name: Job - Develop
 
 on:
-  push:
+  pull_request:
     branches:
       - develop
 
