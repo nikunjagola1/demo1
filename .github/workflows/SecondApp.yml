@@ -1,7 +1,8 @@
 name: Second App
 
-on: [push]
-
+on:
+  milestone:
+    Tuesday
 jobs:
   build:
 
