@@ -2,7 +2,6 @@ name: Second App
 
 on:
   milestone:
-    name: Tuesday
     types: [closed]
 
 jobs:
