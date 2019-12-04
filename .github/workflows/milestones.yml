@@ -1,7 +1,7 @@
 name: Milestones
 
 on:
-  milestones:
+  milestone:
     types: [created, opened, edited, closed, deleted]
 
 jobs:
