@@ -1,12 +1,14 @@
 on: [push, pull_request]
-name: CI-3
+name: Test - 1
 jobs:
   ios-testflight:
     name: iOS Testflight
     runs-on: macOS-latest
     steps:
       - name: Force xcode 11
-        run: sudo xcode-select -switch /Applications/Xcode_11.1.app  
+        run: |
+          echo "Push Called"
+          sudo xcode-select -switch /Applications/Xcode_11.1.app  
 
       - uses: actions/checkout@v1
 
@@ -18,7 +20,7 @@ jobs:
         run: |
           ls
 
-      - name: fastlane build and testflight deploy
-        uses: maierj/fastlane-action@v0.10.0
-        with:
-          lane: 'beta'
+      # - name: fastlane build and testflight deploy
+      #   uses: maierj/fastlane-action@v0.10.0
+      #   with:
+      #     lane: 'beta'
