@@ -3,7 +3,7 @@ name: Job - Testflight
 on:
   pull_request:
     branches:
-      - Testflight
+      - master
 
 jobs:
   build:
