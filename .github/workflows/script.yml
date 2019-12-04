@@ -1,24 +1,34 @@
-on: [push, pull_request]
-name: CI-3
+name: Job - Testflight
+
+on:
+  pull_request:
+    branches:
+      - Testflight
+
 jobs:
-  ios-testflight:
-    name: iOS Testflight
+  build:
+    name: iOS develop
     runs-on: macOS-latest
     steps:
       - name: Force xcode 11
-        run: sudo xcode-select -switch /Applications/Xcode_11.1.app  
+        run: |
+          echo "Pull pull-request Opened"
+          sudo xcode-select -switch /Applications/Xcode_11.1.app  
 
       - uses: actions/checkout@v1
 
-      - name: git Clone Cert 
-        run:
-          git clone https://nikunjagola1:b9b208e63775a774fffbe89788bd28d8a571dec7@github.com/nikunjagola1/nikunjCertificates.git 
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # - name: git Clone Cert 
+      #   run:
+      #     git clone https://nikunjagola1:b9b208e63775a774fffbe89788bd28d8a571dec7@github.com/nikunjagola1/nikunjCertificates.git 
 
       - name: List
         run: |
           ls
 
-      - name: fastlane build and testflight deploy
-        uses: maierj/fastlane-action@v0.10.0
-        with:
-          lane: 'beta'
+      # - name: fastlane build and testflight deploy
+      #   uses: maierj/fastlane-action@v0.10.0
+      #   with:
+      #     lane: 'beta'
