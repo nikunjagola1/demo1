@@ -1,6 +1,9 @@
-name: CI
+name: First App
 
-on: [push]
+on:
+  milestone:
+    Monday
+  
 
 jobs:
   build:
