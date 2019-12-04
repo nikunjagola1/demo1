@@ -1,9 +1,9 @@
 name: First App
 
 on:
-  milestone:
+  issues:
     name: Monday
-    types: [closed]
+    types: [opened, edited, closed, milestoned]
 
 jobs:
   build:
