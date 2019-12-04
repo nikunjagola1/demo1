@@ -3,6 +3,7 @@ name: First App
 on:
   milestone:
     name: Monday
+    types: [closed]
 
 jobs:
   build:
