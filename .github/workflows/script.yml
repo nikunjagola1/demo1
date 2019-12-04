@@ -1,20 +1,28 @@
-on: [push, pull_request]
-name: Test - 1
+name: Job - Testflight
+
+on:
+  pull-request:
+    branches:
+      - Testflight
+
 jobs:
-  ios-testflight:
-    name: iOS Testflight
+  build:
+    name: iOS develop
     runs-on: macOS-latest
     steps:
       - name: Force xcode 11
         run: |
-          echo "Push Called"
+          echo "Pull pull-request Opened"
           sudo xcode-select -switch /Applications/Xcode_11.1.app  
 
       - uses: actions/checkout@v1
 
-      - name: git Clone Cert 
-        run:
-          git clone https://nikunjagola1:b9b208e63775a774fffbe89788bd28d8a571dec7@github.com/nikunjagola1/nikunjCertificates.git 
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # - name: git Clone Cert 
+      #   run:
+      #     git clone https://nikunjagola1:b9b208e63775a774fffbe89788bd28d8a571dec7@github.com/nikunjagola1/nikunjCertificates.git 
 
       - name: List
         run: |
