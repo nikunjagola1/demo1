@@ -20,7 +20,7 @@ platform :ios do
           keychain_password: "meow",
           username: "nikunj.agola@tatvasoft.com",
           app_identifier: "com.tatvasoft.vidoetest")
-    gym(scheme: "demoCI", export_method: "app-store", clean: true , disable_xcpretty: true)
-    upload_to_testflight(username: "nikunj.agola@tatvasoft.com", team_id: ENV["TEAM_ID_ITC"])
+    # gym(scheme: "demoCI", export_method: "app-store", clean: true , disable_xcpretty: true)
+    # upload_to_testflight(username: "nikunj.agola@tatvasoft.com", team_id: ENV["TEAM_ID_ITC"], skip_waiting_for_build_processing: true)
   end
-end
+end 8
