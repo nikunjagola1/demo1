@@ -33,4 +33,4 @@ jobs:
       #     slack-optional-icon_emoji: ":fire:"
       #     slack-optional-as_user: false
       - name: Result from "Send Message"
-        run: echo "(github.event.head_commit.message)"
+        run: echo github.event.head_commit.message
