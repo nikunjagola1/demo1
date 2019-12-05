@@ -24,13 +24,13 @@ jobs:
       #   uses: pullreminders/slack-action@master
       #   with:
       #     args: '{\"channel\":\"DJ90G0D9V\",\"text\":\"Test Slack Bot Message\"}'
-      - name: Send message to Slack API
-        uses: archive/github-actions-slack@v1.0.0
-        with:
-          slack-bot-user-oauth-access-token: xoxb-426698273411-860224715140-28ZOyf4JE259SFC2dvqhjDZD
-          slack-channel: DJ0SDGFGR
-          slack-text: Hello! sometask is going on Github Actions, check it.
-          slack-optional-icon_emoji: ":fire:"
-          slack-optional-as_user: false
+      # - name: Send message to Slack API
+      #   uses: archive/github-actions-slack@v1.0.0
+      #   with:
+      #     slack-bot-user-oauth-access-token: xoxb-426698273411-860224715140-28ZOyf4JE259SFC2dvqhjDZD
+      #     slack-channel: DJ0SDGFGR
+      #     slack-text: Hello! sometask is going on Github Actions, check it.
+      #     slack-optional-icon_emoji: ":fire:"
+      #     slack-optional-as_user: false
       - name: Result from "Send Message"
-        run: echo "The result was ${{ steps.notify.outputs.slack-result }}"
+        run: echo "(github.event.head_commit.message"
