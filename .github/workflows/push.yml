@@ -18,9 +18,19 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
 
-      - name: Notify slack
-        env:
-          SLACK_BOT_TOKEN: xoxp-426698273411-607720160771-860218110260-ccbc3fdb5d9117550ed88835e17c4074
-        uses: pullreminders/slack-action@master
+      # - name: Notify slack
+      #   env:
+      #     SLACK_BOT_TOKEN: xoxp-426698273411-607720160771-860218110260-ccbc3fdb5d9117550ed88835e17c4074
+      #   uses: pullreminders/slack-action@master
+      #   with:
+      #     args: '{\"channel\":\"DJ90G0D9V\",\"text\":\"Test Slack Bot Message\"}'
+      - name: Send message to Slack API
+        uses: archive/github-actions-slack@v1.0.0
         with:
-          args: '{\"channel\":\"DJ90G0D9V\",\"text\":\"Test Slack Bot Message\"}'
+          slack-bot-user-oauth-access-token: xoxp-426698273411-607720160771-860218110260-ccbc3fdb5d9117550ed88835e17c4074
+          slack-channel: DJ90G0D9V
+          slack-text: Hello! sometask is going on Github Actions
+          slack-optional-icon_emoji: ":fire:"
+          slack-optional-as_user: false
+      - name: Result from "Send Message"
+        run: echo "The result was ${{ steps.notify.outputs.slack-result }}"
