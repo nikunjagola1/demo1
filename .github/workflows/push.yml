@@ -32,7 +32,7 @@ jobs:
       #     slack-text: Hello! sometask is going on Github Actions, check it.
       #     slack-optional-icon_emoji: ":fire:"
       #     slack-optional-as_user: false
-      - name: Result from "Send Message"
-        if: "!contains(github.event.head_commit.message, '[skip]')"
-          run: echo True!
+      # - name: Result from "Send Message"
+      #   if: "!contains(github.event.head_commit.message, '[skip]')"
+      #     run: echo True!
 

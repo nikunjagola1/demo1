@@ -6,7 +6,7 @@ name: Second App
 on:
   push:
     tags:
-    - '*'
+    - 'myapp*'
 
 jobs:
   build:
