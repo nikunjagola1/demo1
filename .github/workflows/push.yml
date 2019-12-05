@@ -27,8 +27,8 @@ jobs:
       - name: Send message to Slack API
         uses: archive/github-actions-slack@v1.0.0
         with:
-          slack-bot-user-oauth-access-token: xoxp-426698273411-607720160771-849213588659-e5d199dd45f2522cb01c8d232c2cddbb
-          slack-channel: DJ90G0D9V
+          slack-bot-user-oauth-access-token: xoxb-426698273411-860224715140-28ZOyf4JE259SFC2dvqhjDZD
+          slack-channel: DJ0SDGFGR
           slack-text: Hello! sometask is going on Github Actions, check it.
           slack-optional-icon_emoji: ":fire:"
           slack-optional-as_user: false
