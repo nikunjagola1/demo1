@@ -16,7 +16,7 @@ jobs:
           sudo xcode-select -switch /Applications/Xcode_11.1.app  
 
       - name: Run a one-line script
-        run: echo Hello, world!
+        run: echo Hello, world
 
       # - name: Notify slack
       #   env:
@@ -29,7 +29,7 @@ jobs:
         with:
           slack-bot-user-oauth-access-token: xoxp-426698273411-607720160771-860218110260-ccbc3fdb5d9117550ed88835e17c4074
           slack-channel: DJ90G0D9V
-          slack-text: Hello! sometask is going on Github Actions
+          slack-text: Hello! sometask is going on Github Actions, check it.
           slack-optional-icon_emoji: ":fire:"
           slack-optional-as_user: false
       - name: Result from "Send Message"
