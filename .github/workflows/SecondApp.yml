@@ -1,8 +1,12 @@
 name: Second App
 
+# on:
+#   issue_comment:
+#     types: [created, deleted]
 on:
-  issue_comment:
-    types: [created, deleted]
+  push:
+    tags:
+    - '*'
 
 jobs:
   build:
@@ -12,4 +16,4 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run a one-line script
-      run: echo Second App Script Run
+      run: echo Tag Pushed
