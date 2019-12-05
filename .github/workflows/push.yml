@@ -1,7 +1,7 @@
 name: Job - Develop
 
 on:
-  pull_request:
+  push:
     branches:
       - develop
 
@@ -18,7 +18,9 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
 
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      - name: Notify slack
+        env:
+          SLACK_BOT_TOKEN: xoxp-426698273411-607720160771-860218110260-ccbc3fdb5d9117550ed88835e17c4074
+        uses: pullreminders/slack-action@master
+        with:
+          args: '{\"channel\":\"DJ90G0D9V\",\"text\":\"Test Slack Bot Message\"}'
